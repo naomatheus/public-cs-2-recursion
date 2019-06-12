@@ -71,18 +71,47 @@ function coinFlips(n){
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"
+    let lengthOfStr = n;
+    let heads = 'H';
+    let tails = 'T';
+    
+    let combArr = [];
+    
+    for (let i = n*n; i >= 0; i--){
+        
+        let comb = [];
+        combArr.push(heads + tails);
+        console.log(combArr);
+    } 
 
+    uniqueCombs = combArr.filter((face, position) => {
+        return combArr.indexOf(face) === position;
+    })
+    console.log(uniqueCombs, '<-- uniqueCombs');
 
+    const filter = (arr) => {
+        // filter the unique combinations from first filter function
+        return uniqueCombs.filter((face, pos) => {
+            
+            // reverse and filter them 
 
+            return (uniqueCombs.indexOf(face) === pos).reverse();       
+        })
+    }
 
+    console.log(filter(uniqueCombs), '<-- filtered unique combs');
+    /// now I can place a filter condition on the array, and if it does not meet the condition remix the elements 
+    return n 
 }
-console.log(coinFlips(2));
+console.log(coinFlips(2), '<-- coinFlips');
 
 // function letterCombinations(){
 //     // This function returns an array of all combinations of the given letters
 //     // Input type: Array of single characters
 //     // For example, letterCombinations(["a","b","c"]) would return the following:
 //     // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
+    
+
 
 // }
 
@@ -104,7 +133,7 @@ function letterCombinations(str){
     return all;
 }
 
-console.log(letterCombinations('abc'));
+// console.log(letterCombinations('abc'));
 
 module.exports = {
     findMax,
