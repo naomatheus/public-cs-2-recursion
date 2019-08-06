@@ -1,6 +1,5 @@
-// Write code inside the functions
-// You will have to figure out what parameters to include
-// All functions must use recursion
+// code written inside the functions
+// All functions use recursion or are test cases before implementing recursive solutions
 
 function findMax(arr){
     // will take an array
@@ -133,7 +132,7 @@ function letterCombinations(str){
     return all;
 }
 
-// console.log(letterCombinations('abc'));
+console.log(letterCombinations('abc'));
 
 module.exports = {
     findMax,
