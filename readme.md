@@ -16,7 +16,7 @@ There were two components to this lesson:
 - Identify functions that use recursion and explain why it’s used.
 
 ## Duration
-1.5 hours total:
+
 * 0.5 hour myGA
 * 1 hour in class
 * Uncountable hours outside of class
